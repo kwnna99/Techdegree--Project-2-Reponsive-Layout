@@ -1,0 +1,274 @@
+/**Main styles**/
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato',serif;
+    font-size:18px;
+    line-height: 1.6;
+	color: #3a3a3a;
+	margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+p{
+    text-align: center;
+    margin-bottom: 1.8em;
+    margin-top:0;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a{
+    color:#545454;
+    transition: all .5s;
+}
+
+.main-nav a:hover, .last a:hover, a:hover{
+    color:#E16389;
+}
+
+h1,h2,h3{
+    font-family: 'Montserrat',serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/**Element Styles**/
+#pageWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.col, #skills {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.col h3{
+    margin-top: 1em;
+}
+.initialDescription,.footerText{
+    font-weight: 300;
+    color:#6a6a6a;
+}
+
+.initialDescription{
+    margin-top: 1em;
+}
+
+.name{
+    text-align: center;
+    font-size: 2em;
+	margin: 0;
+}
+
+.main-nav{
+    margin-top: 5px;
+}
+
+.main-nav a {
+    display: block;
+	text-align: center;
+	padding: 10px 0;
+    margin: 0.3rem 1rem;
+    background-color: white;
+}
+
+.main-nav a, .last a{
+    color: #3a3a3a;
+}
+
+
+.main-header{
+    padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+#home {
+    align-items: center;
+	padding: 1.6em 1em;
+    text-align: center;
+}
+
+#pageWrapper{
+    background-color: #FFEEEC;
+}
+
+#portfolio, #skills{
+    background-color: white;
+}
+
+.me{
+    width: 190px;
+}
+
+.main-nav a, .title, .contactdetail{
+    font-weight: bold;
+}
+
+.upcase{
+    text-transform: uppercase;
+}
+
+.title{
+    font-size:0.95rem;
+    padding: 1.5em 0;
+}
+
+.main-header,#home, #portfolio,#skills, .main-nav, .col,.contact,.footerCol,.last,.skills,.projects{
+    display: flex;
+}
+
+.main-header,#home, #portfolio, #skills, .main-nav, .col,.footerCol,.projects{
+    flex-direction: column; 
+}
+
+.contact,.last,.skills{
+    flex-direction: row;
+}
+
+#home, #portfolio, #skills,.col,.footerCol{
+    align-items: center;
+}
+
+#portfolio{
+    justify-content: space-between;
+}
+
+.main-footer{
+    padding:2em 1em 0em;
+}
+
+.contactdetail{
+    margin-left: 0.7em;
+}
+
+
+.contact .footerText{
+    margin-bottom:0.5em;
+}
+
+.footerCol{
+    border-bottom: 1px solid #6a6a6a;
+    padding-bottom:3em;
+}
+
+.last,.skills{
+    justify-content: space-between;
+}
+
+.skills li {
+    flex:1 30%;
+    border-radius: 6px;
+    background: #FAA5C2;
+    color: white;
+    padding: 5px 10px;
+    margin-bottom: 2%;
+    margin-left:2%;
+    text-align: center;
+  }
+  
+  .skills li:nth-child(odd) {
+    background: #E16389;
+  }
+
+  .skills{
+      flex-wrap: wrap;
+  }
+
+  #secondnav{
+      display: none;
+  }
+
+  .main-footer {
+    margin-top: auto;
+  } 
+
+
+  /**Media Queries**/
+  @media screen and (min-width:768px){
+      .projects{
+          flex-direction: row;
+          flex-wrap:wrap;
+      }
+      .col{
+          flex:1 50%;
+      }
+
+      .main-nav,#home{
+          flex-direction: row;
+      }
+
+      #home{
+          justify-content: space-between;
+          align-items: flex-start;
+          padding-bottom: 3em;
+      }
+      .main-nav,.main-header{
+          align-items: center;
+      }
+
+      .main-nav a{
+          background-color: transparent;
+      }
+      .me{
+          order:1;
+          width: 40%;
+      }
+      #home .initialDescription{
+          margin-top: 0;
+          text-align: left;
+          width:60%;
+          padding-right: 1em;
+      }
+
+      #backToTop{
+          display: none;
+      }
+
+      #secondnav{
+          display: block;
+          font-size: 0.95rem;
+      }
+  }
+
+  @media screen and (min-width:1024px){
+    .main-header {
+		flex-direction: row;
+		justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 1em;
+	}
+
+    .projects{
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+    .col{
+        flex:1 33%;
+    }
+
+    #pageWrapper{
+        background-color: #FFEEEC;    
+        padding:1em 1em 0;
+    }
+  }
